@@ -5,7 +5,12 @@ require("dotenv").config();
 const comentariosRoutes = require("./routes/comentariosroutes.js");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://portafoliodevictortabares.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(express.json());
 
 // Ruta base para comentarios
