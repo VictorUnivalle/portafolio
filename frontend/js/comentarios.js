@@ -1,4 +1,4 @@
-const API_URL = "https://portafolio-d5tv.onrender.com/api/comentarios";
+const API_URL = "https://portafolio-0xzw.onrender.com/api/comentarios";
 
 // Enviar comentario
 document.getElementById("comentarioForm").addEventListener("submit", async (e) => {
