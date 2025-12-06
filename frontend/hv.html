@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Librería de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+        
+    <div id="menu"></div>
+
+    <script>
+    fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("menu").innerHTML = data;
+        // Asigna el event listener aquí, después de cargar el menú
+        const btn = document.getElementById('toggle-dark-mode');
+        if (btn) {
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        }
+    });
+    </script>
+    
+    <!-- Contenido principal -->
+    <section class="principal">
+
+        <!-- Columna izquierda (foto, nombre, redes) -->
+        <div class="columna-izquierda">
+            <div class="foto-container">
+                <img src="fotohv.jpg" alt="Foto hoja de vida">
+                <div class="nombre">Víctor Manuel Tabares Toro</div>
+                <div class="info">Estudiante en TDS</div>
+                <div class="redes">
+                    <a href="https://www.linkedin.com/in/victor-manuel-tabares-666b53302"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/victor_tabares_06?igsh=MjgyM3ZmYnh5a2p4"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/VictorPersonal"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna derecha (quién soy, habilidades) -->
+        <div class="columna-derecha">
+            <div class="seccion">
+                <h2>Quién soy</h2>
+                <p>Desarrollador de software, apasionado por resolver problemas usando la tecnología.
+                    En mi proceso he implementado para mis software herramientas como Python, Django, PostgreSQL, MySQL, versionamiento, React.js 
+                y gestión de dashboard estadísticos con power BI.</p>
+            </div>
+
+            <div class="seccion">
+                <h2>Habilidades</h2>
+                <ul class="habilidades">
+                    <li><span>Python</span><div class="barra"></div></li>
+                    <li><span>SQL</span><div class="barra"></div></li>
+                    <li><span>Power BI</span><div class="barra"></div></li>
+                    <li><span>Git y GitHub</span><div class="barra"></div></li>
+                    <li><span>React</span><div class="barra"></div></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>

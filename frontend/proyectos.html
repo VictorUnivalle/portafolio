@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Aquí se cargará el menú -->
+  
+  <div id="menu"></div>
+
+  <script>
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu").innerHTML = data;
+      // Asigna el event listener aquí, después de cargar el menú
+      const btn = document.getElementById('toggle-dark-mode');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+        });
+      }
+    });
+  </script>
+
+  <section class="proyectos">
+
+
+    <div class="contenedorproyecto"> <!--main-container-->
+      <h2 class="titulodelapalabraproyecto">
+        <span class="heading-sec__main">
+          Mis Proyectos
+          <!--::after-->
+        </span>
+        <span class="heading-sec__sub">
+          Algunos de mis proyectos realizados
+        </span>
+
+      </h2>
+      
+      <div class="contenidoproyectos"> <!--projects-content-->
+        
+        <!--Este es una tarjeta para la descripcion de cada proyecto hecho-->
+
+        <!--Proyecto1-->
+        <div class="proyecticos"> <!--projects-row-->
+          <div class="proyecticosimg"> <!--projects__row-img-cont-->
+            <img src="asssets/laptopmarco.png" alt="Proyecto-laptop-marco" class="imagendeproyecto"> <!--projects__row-img-->
+          </div>
+          <div class="proyecticoscontenido"> <!--projects__row-content-->
+            <h3 class="proyecticostitulo">Software de Dulce Hogar</h3> <!--projects__row-tittle-->
+            <p class="proyecticosparrafo">Información relevante</p><!--projects__row-desc-->
+            <a class="botondedescripcion" href="">Mas info.</a> <!--btn btn--med btn--theme dynamicBgClr-->
+          </div>
+        </div>
+
+
+        <!--Proyecto2-->
+        <div class="proyecticos"> <!--projects-row-->
+          <div class="proyecticosimg"> <!--projects__row-img-cont-->
+            <img src="asssets/laptopmarco.png" alt="Proyecto-laptop-marco" class="imagendeproyecto"> <!--projects__row-img-->
+          </div>
+          <div class="proyecticoscontenido"> <!--projects__row-content-->
+            <h3 class="proyecticostitulo">Parking Drive</h3> <!--projects__row-tittle-->
+            <p class="proyecticosparrafo">Parking Drive es un sistema de logística dirijida a la industria de estacionamiento vehicular, busca optimizar la gestión de los vehículos, garantiza el orden de ingreso y salida de cada vehiculo que toca el establecimiento.</p><!--projects__row-desc-->
+            <a class="botondedescripcion" href="/proyectos/parkindrive.html">Mas info.</a> <!--btn btn--med btn--theme dynamicBgClr-->
+          </div>
+        </div>
+        
+        <!--Proyecto3-->
+        <div class="proyecticos"> <!--projects-row-->
+          <div class="proyecticosimg"> <!--projects__row-img-cont-->
+            <img src="asssets/laptopmarco.png" alt="Proyecto-laptop-marco" class="imagendeproyecto"> <!--projects__row-img-->
+          </div>
+          <div class="proyecticoscontenido"> <!--projects__row-content-->
+            <h3 class="proyecticostitulo">Sistema de Registro Ciudadano</h3> <!--projects__row-tittle-->
+            <p class="proyecticosparrafo">Sistema relacional para La Registraduría Nacional, busca optimizar la gestión de información personal de los ciudadanos, garantiza la <strong>Unicidad</strong> de los <strong>Documentos de Identidad</strong>.</p><!--projects__row-desc-->
+            <a class="botondedescripcion" href="/proyectos/registraduriabd.html">Mas info.</a> <!--btn btn--med btn--theme dynamicBgClr-->
+          </div>
+        </div>
+
+        <!--Proyecto4-->
+        <div class="proyecticos"> <!--projects-row-->
+          <div class="proyecticosimg"> <!--projects__row-img-cont-->
+            <img src="asssets/laptopmarco.png" alt="Proyecto-laptop-marco" class="imagendeproyecto"> <!--projects__row-img-->
+          </div>
+          <div class="proyecticoscontenido"> <!--projects__row-content-->
+            <h3 class="proyecticostitulo">Objetivos de desarrollo sostenible</h3> <!--projects__row-tittle-->
+            <p class="proyecticosparrafo">Información relevante</p><!--projects__row-desc-->
+            <a class="botondedescripcion" href="">Mas info.</a> <!--btn btn--med btn--theme dynamicBgClr-->
+          </div>
+        </div>
+        
+          
+
+      </div>
+    </div>
+
+
+  </section>
+  
+
+<script src="js/index.js"></script>
+</body>
+</html>
